@@ -1,23 +1,53 @@
 import React from "react";
-import Headers from "./Headers";
-import Article from "./Article";
-import Footer from "./Footer";
+//import Headers from "./components/Headers";
+//import Article from "./components/Article";
+//import Footer from "./components/Footer";
+import SignInSide from "./components/SignInSide";
+//import modal1 from "./components/modal1";
+//import SimpleModal from "./components/modal1";
+import TstStyle from "./components/TstStyle";
+import 'fontsource-roboto';
+
 
 
 
 class App extends React.Component{
   render(){
-    return (
-      <div>
-        <Headers />
-        <Article />
-        <Footer />
+    return (                        
+      <div>        
+        <SignInSide />
+        
       </div>
     );    
   }
-
-
 }
+ 
+
+ 
+//Currently using React {React.version}
+
+//<SignInSide />
+
+//teste render
+/*class App extends React.Component{
+  render(){
+    return (                        
+
+      <div>
+      <SimpleModal />
+      
+    </div>
+       
+    );    
+  }
+}*/
+
+
+
+
+
+
+
 
 
 
@@ -26,6 +56,14 @@ class App extends React.Component{
 
 export default App;
 
+
+/* Div blank
+  <div>
+  <Headers />
+  <Article />
+  <Footer />
+  </div>
+*/
 
 
 
