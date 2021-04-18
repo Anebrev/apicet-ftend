@@ -4,6 +4,19 @@
     // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
     "version": "0.2.0",
     "configurations": [
+        
+        {
+            "name": "Launch FireFox",
+            "type": "firefox",
+            "request": "launch",
+            "reAttach": true,            
+            "url": "http://localhost:3001/Login",
+            //"url": "http://localhost3000", return informations about dev
+            "webRoot": "${workspaceFolder}"
+       },
+      
+      
+
         {
             "name": "Launch Edge",
             "request": "launch",

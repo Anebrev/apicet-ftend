@@ -11,6 +11,6 @@ render(){
  );
 }
 
-}
+};
 
 export default Footer;

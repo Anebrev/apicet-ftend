@@ -1,18 +1,36 @@
 import React from 'react';
-import Avatar from '@material-ui/core/Avatar';
-import Button from '@material-ui/core/Button';
-import CssBaseline from '@material-ui/core/CssBaseline';
-import TextField from '@material-ui/core/TextField';
-import FormControlLabel from '@material-ui/core/FormControlLabel';
-import Checkbox from '@material-ui/core/Checkbox';
-import Link from '@material-ui/core/Link';
-import Paper from '@material-ui/core/Paper';
-import Box from '@material-ui/core/Box';
-import Grid from '@material-ui/core/Grid';
+import {
+  ThemeProvider,
+  Button, TextField, Checkbox, FormControlLabel,  
+  Link,
+  Paper,
+  Box, Grid,  
+  Avatar,
+  Typography,  
+  CssBaseline
+} from "@material-ui/core";
 import LockOutlinedIcon from '@material-ui/icons/LockOutlined';
-import Typography from '@material-ui/core/Typography';
+
+//import Avatar from '@material-ui/core/Avatar';
+//import Button from '@material-ui/core/Button';
+//import CssBaseline from '@material-ui/core/CssBaseline';
+//import TextField from '@material-ui/core/TextField';
+//import FormControlLabel from '@material-ui/core/FormControlLabel';
+//import Checkbox from '@material-ui/core/Checkbox';
+//import Link from '@material-ui/core/Link';
+//import Paper from '@material-ui/core/Paper';
+//import Box from '@material-ui/core/Box';
+//import Grid from '@material-ui/core/Grid';
+//import Typography from '@material-ui/core/Typography';
+
 import { makeStyles } from '@material-ui/core/styles';
-import 'fontsource-roboto';
+//import 'fontsource-roboto';
+//import TFCustomCSS from "./TFiled/TFCustomCSS";
+//import TFCSS from "./TFiled/TFCustomCSS";
+
+//import {ThemeProvider} from "@material-ui/core";
+import theme from './theme';
+
 
 function Copyright() {
   return (
@@ -27,6 +45,8 @@ function Copyright() {
   );
 }
 
+
+/*
 const useStyles = makeStyles((theme) => ({
   root: {
     height: '100vh',    
@@ -60,46 +80,41 @@ const useStyles = makeStyles((theme) => ({
   bkgCet: {
     backgroundColor: '#424242',
   },
-
   cetFont: {        
     color: '#ffffff',
   },
-
-  cetTextField: {    
-
-    '&:hover fieldset': {
-      //borderColor: 'yellow',
-      bordersize: 1.2,
-      backgroundColor: 'lightblue',
-      //borderColor: 'orange',
-      //reborder: '1.5px',
-      
-    
-    },
-
-   
   
-  '&.Mui-focused fieldset': {
-    //borderColor: 'green',
-    backgroundColor: 'lightblue',
-  },
 
+}));*/
 
-
-    '& > *': {
-      //margin: theme.spacing(1),
-      //width: '25ch',
-      borderColor: 'orange',
-    },
-
-  },  
-
-}));
 
 export default function SignInSide() {
-  const classes = useStyles();
+  //const classes = useStyles();
 
   return (
+
+
+    <div>
+    <p>----</p>
+    <ThemeProvider theme={theme}>            
+
+   
+        <Button variant="contained" color="secondary"> .... </Button>            
+        <TextField label="teste custom them" variant="outlined"/>
+   
+      
+    </ThemeProvider>
+    </div>
+
+
+
+
+
+
+
+
+/*
+
     <Grid container component="main" className={classes.root}>
       
       <Grid item xs={false} sm={4} md={7} className={classes.image} />
@@ -115,7 +130,7 @@ export default function SignInSide() {
           </Typography>
           
           <form className={classes.form} noValidate>           
-            <TextField className={classes.cetTextField}
+            <TextField 
               variant="outlined"
               //margin="normal"
               required
@@ -124,17 +139,10 @@ export default function SignInSide() {
               label="Email Addres"
               name="email"
               autoComplete="email"
-
-              //autoFocus              
-              //id="custom-css-outlined-input"
-              //style={{ margin: 3 }}
-              //id="filled-margin-dense"
-              //defaultValue="bar"
-              //className={classes.textField}
-               //helperText="bar"
-              //margin="dense"
-
             />
+            
+
+
             <TextField
               variant="outlined"
               margin="normal"
@@ -178,5 +186,7 @@ export default function SignInSide() {
         </div>
       </Grid>
     </Grid>
+*/
+
   );
 }

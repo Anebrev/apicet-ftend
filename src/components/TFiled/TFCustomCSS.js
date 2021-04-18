@@ -127,7 +127,7 @@ const theme = createMuiTheme({
   },
 });
 
-export default function CustomizedInputs() {
+export default function TFCustomCSS() {
   const classes = useStyles();
 
   return (
