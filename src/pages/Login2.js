@@ -29,7 +29,7 @@ import { makeStyles } from '@material-ui/core/styles';
 //import TFCSS from "./TFiled/TFCustomCSS";
 
 //import {ThemeProvider} from "@material-ui/core";
-import theme from './theme';
+import theme from '../components/theme';
 
 
 function Copyright() {
@@ -46,8 +46,8 @@ function Copyright() {
 }
 
 
-/*
-const useStyles = makeStyles((theme) => ({
+
+const useStyles2 = makeStyles((theme) => ({
   root: {
     height: '100vh',    
   },
@@ -85,71 +85,49 @@ const useStyles = makeStyles((theme) => ({
   },
   
 
-}));*/
+}));
 
 
 export default function SignInSide() {
-  //const classes = useStyles();
+  const classes2 = useStyles2();
 
   return (
 
 
-    <div>
-    <p>----</p>
-    <ThemeProvider theme={theme}>            
+  
 
-   
-        <Button variant="contained" color="secondary"> .... </Button>            
-        <TextField label="teste custom them" variant="outlined"/>
-   
+  <div>
+    <Grid container component="main" className={classes2.root}>
       
-    </ThemeProvider>
-    </div>
-
-
-
-
-
-
-
-
-/*
-
-    <Grid container component="main" className={classes.root}>
+      <Grid item xs={false} sm={4} md={7} className={classes2.image} />
       
-      <Grid item xs={false} sm={4} md={7} className={classes.image} />
-      
-      <Grid item xs={12} sm={8} md={5} component={Paper} elevation={6} square className={classes.bkgCet}  >      
-        <div className={classes.paper}>
+      <Grid item xs={12} sm={8} md={5} component={Paper} elevation={6} square className={classes2.bkgCet}  >  
+        <div className={classes2.paper}>
           <CssBaseline />
-          <Avatar className={classes.avatar}>
+          <Avatar className={classes2.avatar}>
             <LockOutlinedIcon />
           </Avatar>
-          <Typography component="h1" variant="h5" className={classes.cetFont}>
+          <Typography component="h1" variant="h5" className={classes2.cetFont}>
             Sign in 
           </Typography>
           
-          <form className={classes.form} noValidate>           
-            <TextField 
-              variant="outlined"
-              //margin="normal"
+          <form className={classes2.form} noValidate> 
+            <div className={classes2.cetFont}>         
+            <TextField label="Email Addres" 
+              variant="outlined"              
               required
               fullWidth
-              id="email"
-              label="Email Addres"
+              id="email"              
               name="email"
               autoComplete="email"
             />
             
-
-
-            <TextField
+            <TextField label="Password" 
               variant="outlined"
               margin="normal"
               required
               fullWidth
-              name="password"
-              label="Password"
+              name="password"              
               type="password"
               id="password"
               autoComplete="current-password"
@@ -158,15 +136,17 @@ export default function SignInSide() {
               control={<Checkbox value="remember" color="primary" />}
               label="Remember me"
             />
+            </div>
             <Button
               type="submit"
               fullWidth
               variant="contained"
               color="primary"
-              className={classes.submit}
+              className={classes2.submit}
             >
               Sign In
             </Button>
+
             <Grid container>
               <Grid item xs>
                 <Link href="#" variant="body2">
@@ -184,9 +164,28 @@ export default function SignInSide() {
             </Box>
           </form> 
         </div>
+
+
+        <div>
+    <p>----</p>
+    <ThemeProvider theme={theme}>            
+   
+        <Button variant="contained" color="secondary"> .... </Button>            
+        <TextField label="teste custom them" variant="outlined"/>
+         
+    </ThemeProvider>
+    </div>
+
       </Grid>
     </Grid>
-*/
+
+    
+  </div>
+
+
+    
+
+
 
   );
 }
