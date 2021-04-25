@@ -6,6 +6,7 @@ import Store from './Store';
 function App() {
 
 
+    //auth tuto
     return (
         <Store>
            <Routes />
