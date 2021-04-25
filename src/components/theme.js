@@ -1,6 +1,6 @@
 import { createMuiTheme } from '@material-ui/core/styles';
-
-import { grey, deepPurple, amber, blue, lightBlue } from '@material-ui/core/colors';
+import {deepPurple, amber, lightBlue } from '@material-ui/core/colors';
+//import { grey, deepPurple, amber, blue, lightBlue } from '@material-ui/core/colors';
 
 
 

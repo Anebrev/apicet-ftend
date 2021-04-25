@@ -1,23 +1,55 @@
 
+import React, { useContext, useState } from 'react';
+import { Context } from '../Store';
 
 
-import React from 'react';
+const Home = () => {
+    const [state, setState] = useContext(Context);
 
-class Home extends React.Component{
+        
+    return (
+        <> 
+            <h1> Home Page </h1>
+            <p> Logged as: {state.name}</p>             
+            <p> _______________________</p>
+            <p> jason([state, setState).stringfy </p>
+
+        </>
+    );
+        
+};
+
+
+
+
+
+
+
+
+/*class Home extends React.Component{    
 
     render(){
      return(
         
         <div>                      
             <h1>            
-                ## Home Page Sample ## 
+                ## Home Page Sample ## []
+                <p> Logged as:    -state.name-</p>
             </h1>            
         </div>    
      );
     }
     
-    }    
-    export default Home;
+};*/
+
+
+
+
+
+
+
+
+export default Home;
 
 
 
